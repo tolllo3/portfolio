@@ -1,0 +1,112 @@
+@use "sass:math";
+@use "../global" as *;
+.p-works {
+  &__ttl {
+    font-size: 8rem;
+    padding: 162px 0 0 5%;
+    position: fixed;
+    @include mq(tb) {
+      position: inherit;
+    }
+    @include mq(sp2) {
+      font-size: 5.5rem;
+    }
+  }
+  &__cnt {
+    @include mq(tb) {
+      padding-top: 100px;
+    }
+  }
+  &__prod-cnt {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2%;
+    padding-bottom: 5%;
+    &:first-child {
+      padding-top: 300px;
+      @include mq(tb) {
+        padding-top: unset;
+      }
+    }
+    @include mq(tb) {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+    @include mq(sp2) {
+      align-items: flex-start;
+      max-width: 90vw;
+      margin: 0 auto;
+    }
+  }
+  &__prod-img {
+    &--hidden {
+      overflow: hidden;
+    }
+    a {
+      display: block;
+      width: 100%;
+      max-width: 40vw;
+      padding: 15%;
+      background: #151515;
+      @include mq(tb) {
+        max-width: 60vw;
+      }
+      @include mq(sp2) {
+        max-width: none;
+      }
+      &:hover {
+        img {
+          transform: scale(1.08);
+          transition: all 0.3s linear;
+        }
+      }
+      img {
+        transition: all 0.3s linear;
+      }
+    }
+    &-cnt {
+      @include mq(tb) {
+        margin: 0 6px 0 auto;
+      }
+      @include mq(sp2) {
+        margin: 0;
+      }
+    }
+  }
+  &__prod-dsc-cnt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 17px;
+    @include mq(tb) {
+      margin-right: 6px;
+      gap: 10px;
+      margin-bottom: 60px;
+    }
+    @include mq(sp2) {
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    position: relative;
+    @include mq(tb2) {
+      border-bottom: #151515 solid 1px;
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 0;
+      height: 1.5px;
+      background-color: #151515;
+      transition: 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

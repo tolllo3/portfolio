@@ -1,0 +1,58 @@
+@use "sass:math";
+@use "../global" as *;
+.c-slider {
+  overflow: hidden;
+  display: flex;
+  margin-top: calc((100vh - 38.5vh) / 1.6 - 199px);
+  &__slide {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    flex-basis: var(--logo-width, 25%);
+    img {
+      // これで大きさ揃えてもいいのか
+      aspect-ratio: 284/365;
+      width: 75%;
+      border-radius: 10px;
+    }
+  }
+}
+.c-simple-slider {
+  text-align: center;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start; //画像の高さを統一させない
+  justify-content: center; //左右の中央揃え
+  img {
+    display: inline; //念のため
+    width: auto; //念のため
+    max-width: 70%;
+    max-height: 80%;
+    align-self: center; //上下の中央揃え
+    @include mq(sp2) {
+      max-width: 90%;
+    }
+  }
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 10px;
+  left: 30px;
+  width: unset;
+}
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 10px;
+}
+.swiper-pagination-bullet-active {
+  background: #9747ff;
+  border-radius: unset;
+}

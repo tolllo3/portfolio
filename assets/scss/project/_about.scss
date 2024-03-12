@@ -1,0 +1,62 @@
+@use "sass:math";
+@use "../global" as *;
+.p-about {
+  // padding-left: 122px;
+  padding-left: 5%;
+  height: 100vh;
+  background: #fff;
+  @include mq(tb) {
+    padding-left: 50px;
+  }
+  @include mq(tb2) {
+    height: auto;
+  }
+  @include mq(sp2) {
+    padding: 0 8%;
+    height: 100vh;
+  }
+  &__top-ttl {
+    font-size: 8rem;
+    padding-top: 188px;
+    @include mq(sp2) {
+      font-size: 5.5rem;
+    }
+  }
+  &__top-quotation {
+    max-width: 41px;
+    min-width: 20px;
+    @include mq(tb2) {
+      max-width: 30px;
+    }
+    @include mq(sp2) {
+      max-width: 20px;
+    }
+  }
+  &__top-ttl-cnt {
+    display: flex;
+    margin-top: 90px;
+  }
+  &__top-text {
+    line-height: 1.5;
+    font-size: 5rem;
+    padding: 0 33px;
+    @include mq(tb2) {
+      font-size: 4rem;
+      padding-left: 10px;
+    }
+    @include mq(sp2) {
+      font-size: 3rem;
+    }
+  }
+  &__top-text-dsc {
+    font-size: 2rem;
+    padding: 28px 20px 0 70px;
+    @include mq(tb2) {
+      padding: 28px 20px 300px 40px;
+    }
+    @include mq(sp2) {
+      padding: 28px 0 0 10%;
+      font-size: 1.8rem;
+    }
+  }
+}

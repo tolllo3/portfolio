@@ -1,0 +1,23 @@
+@use "sass:math";
+@use "../global" as *;
+.p-prod-img {
+  &__web-cnt {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    padding: 70px 5%;
+    @include mq(sp2) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__web-pc {
+    max-width: 650px;
+  }
+  &__web-sp {
+    max-width: 260px;
+    @include mq(sp2) {
+      width: 50%;
+    }
+  }
+}

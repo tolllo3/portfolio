@@ -1,0 +1,50 @@
+@use "sass:math";
+@use "../global" as *;
+// .c-accordion {
+//   &__cnt {
+//     height: 0;
+//     overflow: hidden;
+//     transition: 0.2s ease height;
+//     &__title {
+//       cursor: pointer;
+//       &:hover {
+//         background-color: #ff0000;
+//       }
+//       &.is-active {
+//         background-color: #ff0000;
+//       }
+//     }
+//   }
+// }
+// .container {
+//   width: 100%;
+//   max-width: 800px;
+//   margin: auto;
+// }
+
+.c-accordion {
+  &__ttl {
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 20px 60px 20px 20px;
+    display: block;
+    // transition: background-color 0.3s;
+    &:hover {
+      color: #c1c1c1;
+    }
+    // &.is-active {
+    //   // background-color: #ff0000;
+    // }
+    @include mq(tb2) {
+      font-size: 1.2rem;
+    }
+  }
+  &__cnt {
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s ease height;
+  }
+  &__inner {
+    padding: 20px;
+  }
+}

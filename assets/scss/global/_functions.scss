@@ -1,0 +1,8 @@
+@use "sass:math";
+
+@function setProp($size, $comp: 1440) {
+  @return percentage(math.div($size, $comp));
+}
+@function setVw($size, $comp: 1440) {
+  @return #{math.div($size, $comp) * 100}vw;
+}

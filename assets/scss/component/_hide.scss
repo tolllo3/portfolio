@@ -1,0 +1,47 @@
+@use "../global" as *;
+
+.pc-none {
+  display: inherit;
+  @include mq(pc, up) {
+    display: none;
+  }
+}
+
+.tb-none {
+  display: inherit;
+  @include mq(tb) {
+    display: none;
+  }
+}
+.tb2-none {
+  display: inherit;
+  @include mq(tb2) {
+    display: none;
+  }
+}
+
+.sp2-none {
+  display: inherit;
+  @include mq(sp2, up) {
+    display: none;
+  }
+}
+
+.sp-only {
+  display: none;
+  @include mq {
+    display: inherit;
+  }
+}
+.sp-none {
+  display: inherit;
+  @include mq {
+    display: none;
+  }
+}
+.sp2-only {
+  display: none;
+  @include mq(sp2) {
+    display: inherit;
+  }
+}

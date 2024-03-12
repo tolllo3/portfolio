@@ -1,0 +1,102 @@
+@use "sass:math";
+@use "../global" as *;
+.p-interest {
+  padding-top: 120px;
+  @include mq(sp2) {
+    padding-top: 80px;
+  }
+  &__ttl {
+    font-size: 7rem;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: -90px;
+    padding: 0 0.5em;
+    background: #f4f2f2;
+    @include mq(tb) {
+      left: -24px;
+      padding: 0 0.2em;
+    }
+    @include mq(sp2) {
+      font-size: 4.7rem;
+      left: -14px;
+    }
+  }
+  img {
+    max-width: 33px;
+    @include mq(sp2) {
+      max-width: 23px;
+    }
+  }
+  &__insta {
+    display: flex;
+    align-items: center;
+  }
+  &__insta-link {
+    border-bottom: #333333 solid 2px;
+  }
+  &__list {
+    padding: 100px 50px 0;
+    @include mq(tb) {
+      padding: 70px 0 0;
+    }
+    @include mq(sp2) {
+      padding: 0;
+    }
+  }
+  &__item-ttl {
+    font-weight: 700;
+    font-size: 3rem;
+    padding-bottom: 30px;
+    @include mq(sp2) {
+      font-size: 2rem;
+      padding-bottom: 15px;
+    }
+  }
+  &__item-dsc {
+    padding-bottom: 70px;
+    @include mq(sp2) {
+      padding-bottom: 50px;
+    }
+  }
+  &__box {
+    padding: 50px;
+    position: relative;
+    margin: 0 2% 100px;
+    @include mq(sp2) {
+      padding: 64px 30px 0;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #faff03;
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: polygon(0 0, calc(100% - 100px) 0, 100% 100px, 100% 100%, 0 100%);
+      @include mq(sp2) {
+        clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%);
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #f4f2f2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: polygon(10px 10px, calc(100% - (100px + #{10 / math.sqrt(2)}px)) 10px, calc(100% - 10px) #{100 + 10 / math.sqrt(2)}px, calc(100% - 10px) calc(100% - 10px), 10px calc(100% - 10px));
+      @include mq(sp2) {
+        clip-path: polygon(5px 5px, calc(100% - (40px + #{5 / math.sqrt(2)}px)) 5px, calc(100% - 5px) #{40 + 5 / math.sqrt(2)}px, calc(100% - 5px) calc(100% - 5px), 5px calc(100% - 5px));
+      }
+    }
+  }
+  &__inner {
+    position: relative;
+    z-index: 10;
+  }
+}

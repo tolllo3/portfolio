@@ -1,0 +1,82 @@
+@use "sass:math";
+@use "../global" as *;
+.c-item {
+  &__name {
+    letter-spacing: 0.3em;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 100px;
+    color: #1a3637;
+    @include mq(tb) {
+      font-size: 1.8rem;
+    }
+  }
+  &__dsc {
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 100px 20px 100px 20px;
+    @include mq(tb) {
+      padding: 50px 20px;
+    }
+  }
+  &__item-name {
+    letter-spacing: 0.2em;
+  }
+  &__grid-cnt {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    grid-gap: 50px 5%;
+    padding: 30px 20px;
+    @include mq(tb) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+    @include mq(sp2) {
+      grid-template-columns: minmax(0, 1fr);
+      padding: 0 20px 50px 20px;
+    }
+  }
+  &__item {
+    width: 100%;
+  }
+  &__item-dsc {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    font-size: 1.2rem;
+    color: rgba(57, 57, 57, 0.45);
+    @include mq(tb) {
+      font-size: 1.1rem;
+    }
+  }
+  &__info {
+    text-align: center;
+    padding: 100px 0;
+    font-size: 1.3rem;
+    a {
+      color: #1a3637;
+      border-bottom: 1px solid #1a3637;
+      &:not(.insta_btn):hover {
+        cursor: pointer;
+        color: rgba(26, 54, 55, 0.6);
+        transition: all 0.3s ease 0s;
+      }
+    }
+    @include mq(sp2) {
+      font-size: 1.2rem;
+      padding: 80px 20px;
+    }
+  }
+}
+
+// .item {
+//   .modaal-close:focus,
+//   .modaal-close:hover {
+//     background: transparent;
+//   }
+//   .modaal-close:focus:after,
+//   .modaal-close:focus:before,
+//   .modaal-close:hover:after,
+//   .modaal-close:hover:before {
+//     background: #fff;
+//   }
+// }

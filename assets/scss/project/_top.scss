@@ -1,0 +1,40 @@
+@use "sass:math";
+@use "../global" as *;
+.p-top {
+  overflow: hidden;
+  &__text {
+    font-size: 2.5rem;
+    margin: 135px 0 0 4.5%;
+    @include mq(sp) {
+      font-size: 1.8rem;
+    }
+  }
+  &__link {
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    margin: 10px 0 0 4.5%;
+    @include mq(tb2) {
+      border-bottom: #151515 solid 1px;
+    }
+    @include mq(sp) {
+      font-size: 1.6rem;
+    }
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: "";
+      width: 0;
+      height: 1.5px;
+      background-color: #151515;
+      transition: 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+      @include mq(tb2) {
+        width: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@use "sass:math";
+@use "../global" as *;
+.p-profile {
+  &__img {
+    padding-top: 72px;
+    min-width: 350px;
+    max-width: 429px;
+    img {
+      border-radius: 10px;
+    }
+    @include mq(tb) {
+      max-width: 300px;
+    }
+    @include mq(sp2) {
+      max-width: 277px;
+    }
+  }
+  &__ttl {
+    padding-top: 122px;
+    @include mq(sp2) {
+      padding-top: 64px;
+    }
+  }
+  &__cnt {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 5% 0 8%;
+    @include mq(tb) {
+      gap: 5%;
+    }
+    @include mq(tb2) {
+      flex-direction: column;
+      gap: unset;
+      align-items: center;
+    }
+  }
+  &__name {
+    font-size: 3rem;
+    padding-top: 13%;
+    @include mq(tb2) {
+      padding-top: 9%;
+    }
+    @include mq(sp2) {
+      font-size: 1.8rem;
+    }
+  }
+  &__dsc {
+    padding-top: 5%;
+    @include mq(tb2) {
+      padding-top: 3%;
+    }
+  }
+  &__dsc-cnt {
+    max-width: 704px;
+  }
+}

@@ -1,0 +1,7 @@
+@use "sass:math";
+@use "../global" as *;
+.l-inner {
+  &__home {
+    height: 100vh;
+  }
+}

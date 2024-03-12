@@ -1,0 +1,19 @@
+@use "sass:math";
+@use "../global" as *;
+
+.c-lid {
+  display: flex;
+  justify-content: center;
+  padding-top: 73vh;
+  &__btn {
+    width: 26px;
+    height: 32px;
+    background-image: url(../image/common/speech-bubble.svg);
+    background-size: 26px 32px;
+    background-repeat: no-repeat;
+    // オープンしたら出す画像
+    // .--content-open & {
+    //   background-image: url(../image/common/check-button.svg);
+    // }
+  }
+}

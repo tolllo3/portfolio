@@ -1,0 +1,61 @@
+@use "sass:math";
+@use "../global" as *;
+.p-skills {
+  padding-top: 173px;
+  @include mq(tb) {
+    padding-top: 130px;
+  }
+  @include mq(sp2) {
+    padding-top: 90px;
+  }
+  &__ttl {
+    padding-bottom: 80px;
+    @include mq(sp2) {
+      padding-bottom: 30px;
+    }
+  }
+  &__skill-cnt {
+    background-color: #fff;
+    padding: 2% 15%;
+    @include mq(sp2) {
+      padding: 8% 8% 5%;
+    }
+    &.--top {
+      margin-bottom: 50px;
+    }
+  }
+  &__skill {
+    font-size: 5rem;
+    font-weight: 700;
+    @include mq(sp2) {
+      font-size: 3rem;
+    }
+  }
+  &__skill-dsc {
+    padding-top: 25px;
+  }
+  &__sub-dsc {
+    &.--tools {
+      font-size: 3rem;
+      @include mq(sp2) {
+        font-size: 1.8rem;
+      }
+    }
+    @include mq(sp2) {
+      display: flex;
+      flex-direction: column;
+    }
+    &-cnt {
+      padding: 29px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      @include mq(sp2) {
+        padding: 20px 0 3px;
+        flex-direction: column;
+        align-items: unset;
+        gap: 3px;
+      }
+    }
+  }
+}

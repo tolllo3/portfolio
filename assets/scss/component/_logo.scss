@@ -1,0 +1,42 @@
+@use "sass:math";
+@use "../global" as *;
+
+// .c-logo {
+//   top: 36px;
+//   left: 80px;
+//   bottom: 4.5%;
+//   width: 13%;
+//   max-width: 130px;
+//   min-width: 70px;
+//   position: fixed;
+//   @include mq(tb) {
+//     left: 50%;
+//     bottom: 92.5%;
+//     width: 13%;
+//     max-width: 100px;
+//     position: fixed;
+//     transform: translateX(-50%);
+//     z-index: 999;
+//   }
+// }
+
+.c-logo {
+  left: 80px;
+  bottom: 4.5%;
+  width: 13%;
+  max-width: 130px;
+  // min-width: 100px;
+  position: fixed;
+  z-index: 999;
+  @include mq(tb) {
+    left: 50%;
+    bottom: unset;
+    top: 36px;
+    width: 13%;
+    min-width: 70px;
+    max-width: 100px;
+    position: fixed;
+    transform: translateX(-50%);
+    z-index: 999;
+  }
+}

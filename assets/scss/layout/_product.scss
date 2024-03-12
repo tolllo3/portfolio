@@ -1,0 +1,130 @@
+@use "sass:math";
+@use "../global" as *;
+.l-product {
+  &__top-inner {
+    padding-left: 5%;
+  }
+  &__name {
+    font-size: 3.5rem;
+    width: 502px;
+    padding-top: 198px;
+    @include mq(sp2) {
+      font-size: 2rem;
+      width: 300px;
+      padding-top: 150px;
+    }
+  }
+  &__type {
+    padding-top: 36px;
+    @include mq(sp2) {
+      padding-top: 15px;
+    }
+  }
+  &__client {
+    padding: 20px 0;
+    @include mq(sp2) {
+      padding: 10px 0 5% 0;
+    }
+  }
+  &__button-site {
+    position: relative;
+    width: 100%;
+    max-width: 185px;
+    margin: 0 5% 0 auto;
+    @include mq(sp2) {
+      max-width: 166px;
+    }
+  }
+  &__swiper-bg {
+    position: relative;
+    height: 694px;
+    background: #f4f2f2;
+    margin: 45px 5% 0;
+    @include mq(tb) {
+      margin: 135px 5% 0;
+    }
+    @include mq(tb2) {
+      margin: 53px 5% 0;
+    }
+    @include mq(sp2) {
+      margin: 35px 5% 0;
+      height: unset;
+      aspect-ratio: 1/1;
+    }
+  }
+  &__dsc {
+    display: flex;
+    gap: 100px;
+    padding-top: 120px;
+    @include mq(tb) {
+      gap: 50px;
+    }
+    @include mq(tb2) {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 90px;
+    }
+    @include mq(sp2) {
+      padding-top: 50px;
+    }
+  }
+  &__dsc-ttl {
+    font-size: 3rem;
+    min-width: 243px;
+    @include mq(sp2) {
+      font-size: 2rem;
+    }
+  }
+  &__dsc-ttl-ja {
+    font-size: 1.3rem;
+    color: #999999;
+    margin-left: 5px;
+  }
+  &__text {
+    // width: 658px;
+    line-height: 1.75;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    @include mq(sp2) {
+      gap: 10px;
+    }
+  }
+  &__list-item-block {
+    display: flex;
+    gap: 20px;
+  }
+  &__list-item {
+    width: 250px;
+    @include mq(tb) {
+      width: 200px;
+    }
+    @include mq(sp2) {
+      width: 130px;
+    }
+    &.--link {
+      width: unset;
+      border-bottom: #151515 solid 1px;
+      &:hover {
+        color: #999999;
+        transition: all 0.3s ease;
+      }
+      @include mq(tb) {
+        color: #999999;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  &__cnt {
+    // padding: 200px;
+    padding: 0 10% 75px;
+    @include mq(tb) {
+      padding-top: 0;
+    }
+  }
+  &__img-bg {
+    background: #dcdcdc;
+  }
+}

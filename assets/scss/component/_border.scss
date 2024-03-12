@@ -1,0 +1,20 @@
+@use "../global" as *;
+
+.c-border {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 88px;
+  margin: 120px auto;
+  background-color: #c1c1c1;
+  clip-path: inset(0 0 100% 0);
+  @include mq(tb2) {
+    margin: 90px auto;
+  }
+  @include mq(sp2) {
+    margin: 70px auto;
+  }
+  @include mq(sp) {
+    height: 60px;
+  }
+}

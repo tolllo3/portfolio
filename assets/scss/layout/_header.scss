@@ -1,0 +1,13 @@
+@use "sass:math";
+@use "../global" as *;
+.l-header {
+  &__top {
+    max-width: 35px;
+    position: absolute;
+    top: 5.5%;
+    left: 5%;
+    @include mq(sp2) {
+      max-width: 30px;
+    }
+  }
+}

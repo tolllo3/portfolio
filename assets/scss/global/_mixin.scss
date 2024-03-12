@@ -1,0 +1,36 @@
+@use "sass:math";
+@use "sass:map";
+
+$breakpoints: (
+  "sp": 400,
+  "sp2": 600,
+  "tb2": 960,
+  "tb": 1025,
+  "pc": 1160,
+  "pc2": 1350,
+  "pcL": 1440,
+);
+
+@mixin mq($point: sp, $dir: down) {
+  @media screen and (#{if($dir != down, "min", "max")}-width: #{if(type-of($point) != number, if($dir != down, map.get($breakpoints,$point), map.get($breakpoints,$point) - 1), if($dir != down, $point, $point - 1))}px) {
+    @content;
+  }
+}
+
+@mixin mqH($point: sp, $dir: down) {
+  @media screen and (#{if($dir != down, "min", "max")}-height: #{if(type-of($point) != number, if($dir != down, map.get($breakpoints,$point), map.get($breakpoints,$point) - 1), if($dir != down, $point, $point - 1))}px) {
+    @content;
+  }
+}
+
+@mixin scrollBar($tr: #000, $th: #333, $w: 10px) {
+  &::-webkit-scrollbar {
+    width: $w;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $tr;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $th;
+  }
+}

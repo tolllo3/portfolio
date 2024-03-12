@@ -1,0 +1,8 @@
+@use "sass:math";
+@use "../global" as *;
+.l-base {
+  &__logo {
+    width: 23px;
+    padding-top: 51px;
+  }
+}

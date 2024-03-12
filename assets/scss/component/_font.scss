@@ -1,0 +1,20 @@
+@use "sass:math";
+@use "../global" as *;
+.c-font {
+  &.--ysabeau {
+    font-family: "Ysabeau Office";
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+  }
+  &.--about-ttl {
+    font-size: 7rem;
+    font-weight: 700;
+    padding-left: 10%;
+    @include mq(sp2) {
+      font-size: 4.7rem;
+    }
+  }
+  &.--bold {
+    font-weight: 700;
+  }
+}

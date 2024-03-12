@@ -1,0 +1,19 @@
+@use "sass:math";
+@use "../global" as *;
+.c-line-white {
+  content: "";
+  background-color: #ececec;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 310px;
+  @include mq(tb) {
+    left: 201px;
+  }
+  @include mq(sp2) {
+    left: 179px;
+  }
+  @include mq(sp2) {
+    left: 120px;
+  }
+}

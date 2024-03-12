@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <!-- logo -->
+    <!-- h1タグをdivタグに変更した -->
+    <header class="l-header c-font --ysabeau">
+      <div class="l-header__top">
+        <a href="index.html"><img src="/assets/image/portfolio-logo.svg" alt="" /></a>
+      </div>
+      <!-- nav -->
+      <div class="l-header-nav">
+        <div class="l-header-nav__top">
+          <div class="l-header-nav__logo">
+            <a href="index.html"><img src="/assets/image/portfolio-logo-white.svg" alt="" /></a>
+          </div>
+          <p class="l-header-nav__text">Ask me!</p>
+        </div>
+        <nav class="l-header-nav__btm">
+          <ul class="l-header-nav__list">
+            <li class="l-header-nav__item"><a href="about.html">Who are you?</a></li>
+            <li class="l-header-nav__item"><a href="works.html">What is your work?</a></li>
+            <li class="l-header-nav__item"><a href="index.html">Let me go home!</a></li>
+            <li class="l-header-nav__item">
+              <a href="m&#97;i&#108;t&#111;:&#116;&#111;&#108;&#108;&#108;&#111;l&#108;l&#105;&#51;&#64;g&#109;ai&#108;&#46;&#99;om">
+                <span class="--arrow-cnt">
+                  Send a message
+                  <span class="--arrow">
+                    <img src="/assets/image/arrow.svg" alt="" />
+                  </span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- ham -->
+      <button id="hamburger" class="c-ham">
+        <div class="c-ham__circle">
+          <div class="c-ham__meatball">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </button>
+    </header>
+    <!-- main start -->
+    <main class="l-main works-single">
+      <section class="l-product l-bg">
+        <div class="l-product__top-inner">
+          <h1 class="l-product__name c-font --ysabeau --bold">Ryota Kamo Portfolio site</h1>
+          <p class="l-product__type c-font --ysabeau">Type : Web Design</p>
+          <p class="l-product__client c-font --ysabeau">Client : 加茂亮太 様</p>
+          <!-- button-site-link -->
+          <div class="l-product__button-site">
+            <a href="https://rryxry.com/" target="blank" class="c-button-site-link">
+              <span class="c-button-site-link__cnt c-font --ysabeau --bold">
+                <p class="c-button-site-link__text">Web Site</p>
+              </span>
+            </a>
+          </div>
+        </div>
+        <!-- mockup-swiper -->
+        <div class="l-product__swiper-bg swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide c-simple-slider">
+              <img src="/assets/image/mockup/mockup-kamofolio.png" alt="加茂亮太様ポートフォリオサイトのpcモックアップ" />
+            </div>
+            <div class="swiper-slide c-simple-slider">
+              <img src="/assets/image/mockup/mockup-kamofolio-sp.png" alt="加茂亮太様ポートフォリオサイトのspモックアップ" />
+            </div>
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <ul class="l-product__cnt">
+          <li class="l-product__dsc">
+            <h2 class="l-product__dsc-ttl c-font --ysabeau">Target<span class="l-product__dsc-ttl-ja">ターゲット</span></h2>
+            <p class="l-product__text">Web制作会社採用担当者の方</p>
+          </li>
+          <li class="l-product__dsc">
+            <h2 class="l-product__dsc-ttl c-font --ysabeau">Cnotext<span class="l-product__dsc-ttl-ja">背景</span></h2>
+            <p class="l-product__text">就職活動用のクライアント様自身のポートフォリオサイトのデザインに行き詰まりを感じたため</p>
+          </li>
+          <li class="l-product__dsc">
+            <h2 class="l-product__dsc-ttl c-font --ysabeau">Purpose<span class="l-product__dsc-ttl-ja">目的</span></h2>
+            <p class="l-product__text">Web制作会社の採用担当者の方にクライアント様の人柄やスキル、思想を的確に伝える</p>
+          </li>
+          <li class="l-product__dsc">
+            <h2 class="l-product__dsc-ttl c-font --ysabeau">Information<span class="l-product__dsc-ttl-ja">情報設計</span></h2>
+            <p class="l-product__text">クライアント様の目指す人物像をアバウトページのトップに載せ、「どのようなエンジニアを目指しているのか」「何が作れるようになりたいか」などの具体的な情報を採用担当者の方に伝えることで、クライアント様の思想と人柄を一番初めに、簡潔に伝える情報設計を組みました。 プロフィールやスキルはもちろんですが、クライアント様が好きなことやものを載せることで、よりクライアント様について知っていただけるように考えました。</p>
+          </li>
+          <li class="l-product__dsc">
+            <h2 class="l-product__dsc-ttl c-font --ysabeau">Design<span class="l-product__dsc-ttl-ja">デザイン</span></h2>
+            <p class="l-product__text">「トップに吸い込まれるようなアニメーションを使用したい」と事前に伺っていたので、その動きに合わせ、“クライアント様の新しい未来”をコンセプトに近未来感のあるデザインを落とし込みました。 配色は未来を連想させる白、青、黄を、ベースにはグレーを配置して全体をなじませました。 タイトルで使用したフォントは、イメージを統一するためにデザイン性の高いものを使用し、文章は可読性の高い日本語フォントを使用しました。 ファーストビューのクライアント様の写真をドットで表現することで、遠くから見ると雰囲気がわかるが、近づいていくと大きな丸の集合体になり、その丸の一つ一つがクライアント様を構成しているという思いを込めてデザインしました。</p>
+          </li>
+          <li class="l-product__dsc">
+            <h2 class="l-product__dsc-ttl c-font --ysabeau">Range<span class="l-product__dsc-ttl-ja">制作範囲</span></h2>
+            <!-- ここの書き方わからない -->
+            <dl class="l-product__text l-product__list">
+              <div class="l-product__list-item-block">
+                <dt class="l-product__list-item">企画</dt>
+                <dd class="l-product__list-item-dsc">３日間</dd>
+              </div>
+              <div class="l-product__list-item-block">
+                <dt class="l-product__list-item">ワイヤーフレーム</dt>
+                <dd class="l-product__list-item-dsc">１日間</dd>
+              </div>
+              <div class="l-product__list-item-block">
+                <dt class="l-product__list-item">デザイン</dt>
+                <dd class="l-product__list-item-dsc">５日間</dd>
+              </div>
+            </dl>
+          </li>
+        </ul>
+        <!-- product-img -->
+        <div class="l-product__img-bg">
+          <div class="p-prod-img__web-cnt">
+            <div class="p-prod-img__web-pc"><img src="/assets/image/prod-page/kamofolio.jpeg" alt="加茂亮太様ポートフォリオサイトのアバウトページpcの全体画像" /></div>
+            <div class="p-prod-img__web-sp"><img src="/assets/image/prod-page/kamofolio-sp.jpeg" alt="加茂亮太様ポートフォリオサイトのアバウトページspの全体画像" /></div>
+          </div>
+        </div>
+        <div class="c-button-works">
+          <a href="works.html" class="c-button-works__text c-font --ysabeau --bold"> Other Works </a>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="l-footer">
+      <nav class="l-footer__nav c-font --ysabeau --bold">
+        <ul class="l-footer__nav-list">
+          <li class="l-footer__nav-item"><a href="works.html">Works</a></li>
+          <li class="l-footer__nav-item"><a href="about.html">About</a></li>
+          <li class="l-footer__nav-item"><a href="index.html">Top</a></li>
+          <li class="l-footer__nav-item"><a href="m&#97;i&#108;t&#111;:&#116;&#111;&#108;&#108;&#108;&#111;l&#108;l&#105;&#51;&#64;g&#109;ai&#108;&#46;&#99;om">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="l-footer__copy-cnt">
+        <copy class="l-footer__copy c-font --ysabeau"><small>&copy;</small>KURITA TOMOMI</copy>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/assets/js/script.js" defer></script>
+  </body>
+</html>

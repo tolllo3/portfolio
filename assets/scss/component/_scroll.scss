@@ -1,0 +1,12 @@
+@use "sass:math";
+@use "../global" as *;
+.c-scroll {
+  overflow-y: scroll;
+  height: 639px;
+  &.--orange {
+    @include scrollBar(#ff894a, #fff502, 5px);
+  }
+  &.--green {
+    @include scrollBar(#5acc7d, #fff502, 5px);
+  }
+}

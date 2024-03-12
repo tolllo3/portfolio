@@ -1,0 +1,32 @@
+@use "sass:math";
+@use "../global" as *;
+.c-pagination {
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  padding-right: 10%;
+  padding-bottom: 100px;
+  & > * + * {
+    margin-left: 8px;
+  }
+  &__border {
+    display: block;
+    content: "";
+    background-color: #c1c1c1;
+    width: 15px;
+    height: 1px;
+  }
+  &__page {
+    font-size: 1.5rem;
+    color: #1a3637;
+    transition: all 0.3s ease 0s;
+    &.--current {
+      // color: #333333;
+      color: #a2a2a2;
+    }
+    &:hover {
+      cursor: pointer;
+      color: #a2a2a2;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use "sass:math";
+@use "../global" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Ysabeau+Office:wght@400;700&display=swap");
+
+html {
+  font-size: 62.5%;
+  // scroll-behavior: smooth;
+}
+
+body {
+  // position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.07em;
+  // line-height: #{math.div(39, 14)};
+  line-height: 2;
+  color: $color-black;
+  font-weight: 400;
+  background-color: #f4f2f2;
+  // background-color: #fff502;
+  @include mq(sp2) {
+    font-size: 1.4rem;
+  }
+}
+
+// a {
+//   color: $color-black;
+// }
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modaal-close:focus,
+.modaal-close:hover {
+  background: transparent;
+}
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #fff;
+}
+dt {
+  font-weight: normal;
+}

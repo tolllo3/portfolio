@@ -1,0 +1,46 @@
+@use "sass:math";
+@use "../global" as *;
+.l-footer {
+  width: 100%;
+  background: #333333;
+  color: #fff;
+  &__nav {
+    font-size: 3rem;
+    padding: 92px 0 132px 92px;
+    @include mq(sp2) {
+      font-size: 2rem;
+      padding: 30px 8% 60px;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  &__nav-item a {
+    display: inline-block;
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      content: "";
+      width: 0;
+      height: 3px;
+      background-color: #faff03;
+      transition: 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &:focus::after {
+      width: 100%;
+    }
+  }
+  &__copy {
+    display: inherit;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 10px;
+  }
+}
